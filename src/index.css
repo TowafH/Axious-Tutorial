@@ -280,3 +280,9 @@ Axios Tutorial
 .dad-joke {
   margin-top: 1rem;
 }
+
+.links{
+  text-align: center;
+  width: 100px;
+  margin: 10px;
+}

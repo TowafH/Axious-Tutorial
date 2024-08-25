@@ -2,7 +2,7 @@ const Title = () => {
   return (
     <div className='title'>
       <h1>
-        <span>axios</span> tutorial
+        <span>Axios</span> Tutorial
       </h1>
     </div>
   );
