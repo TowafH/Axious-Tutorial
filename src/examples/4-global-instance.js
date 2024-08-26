@@ -1,11 +1,17 @@
 import { useEffect } from 'react';
-
-const productsUrl = 'https://course-api.com/react-store-products';
+import axios from 'axios';
+const productsUrl = 'https://www.course-api.com/react-store-products';
 const randomUserUrl = 'https://randomuser.me/api';
 
 const GlobalInstance = () => {
   const fetchData = async () => {
-    console.log('global axios instance');
+    try {
+      const resp3 = await axios(productsUrl);
+      const resp4 = await axios(randomUserUrl);
+      console.log(resp3)
+    } catch (error){
+      console.log(`Error: ${error}`)
+    }
   };
 
   useEffect(() => {

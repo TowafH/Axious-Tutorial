@@ -10,8 +10,8 @@ const FirstRequest = () => {
   //Practice Get Request with AXIOS
     try{
       // STANDARD AXIOS GET REQUEST
-      const response = await axios.get(url);
-      const data = response.data;
+      const resp = await axios.get(url);
+      const data = resp.data;
       console.log(data);
     } catch (error){
       console.error(`Error: ${error.response}`);

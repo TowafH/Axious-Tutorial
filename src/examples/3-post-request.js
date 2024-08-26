@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-const url = 'https://course-api.com/axios-tutorial-post';
+const url = 'https://www.course-api.com/axios-tutorial-post';
 
 const PostRequest = () => {
   const [name, setName] = useState('');
@@ -8,7 +8,15 @@ const PostRequest = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email);
+    try{
+      const resp2 = await axios.post(url, {
+        name, 
+        email
+      });
+    console.log(resp2.data)
+  } catch (error) {
+    console.log(error.response)
+  }
   };
 
   return (
@@ -40,7 +48,7 @@ const PostRequest = () => {
           />
         </div>
         <button type='submit' className='btn btn-block'>
-          login
+          register
         </button>
       </form>
     </section>

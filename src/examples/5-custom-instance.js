@@ -1,10 +1,20 @@
 import { useEffect } from 'react';
 
-const randomUserUrl = 'https://randomuser.me/api';
+//necessary Imports for course-api
+import authFetch from '../axios/custom';
+//Necessary Imports for RandomUser
+import axios from 'axios'
+
+const randomUserUrl = 'https://www.randomuser.me/api';
 
 const CustomInstance = () => {
   const fetchData = async () => {
-    console.log('custom axios instance');
+    try{
+      const resp5 = await authFetch('/react-store-products');
+      const resp6 = await axios.get(randomUserUrl)
+    } catch(error){
+      console.error(`Error: ${error}`)
+    }
   };
 
   useEffect(() => {
